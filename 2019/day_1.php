@@ -1,6 +1,6 @@
 <?
 function puts($line) {
-    echo "$line\n";
+    echo "{$line}\n";
 }
 
 function calc_fuel($mass) {
@@ -21,12 +21,8 @@ $modules = [137139,104321,137149,82531,97698,56831,115133,64329,111730,145953,73
 puts('part 1');
 puts( array_sum( array_map('calc_fuel', $modules) ) );
 
-puts('--------------------------------------------------')
+puts('-------');
 
 puts('part 2:');
-$total_fuel = 0;
-foreach ($modules as $mass) {
-	$total_fuel += calc_fuel_recursive($mass);
-}
-puts($total_fuel);
+puts( array_sum( array_map('calc_fuel_recursive', $modules) ) );
 ?>
