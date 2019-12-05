@@ -1,4 +1,8 @@
 <?
+function puts($line) {
+    echo "$line\n";
+}
+
 #day 1a
 function calc_fuel($mass) {
 	return floor($mass / 3) - 2;
